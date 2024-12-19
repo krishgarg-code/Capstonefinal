@@ -11,8 +11,6 @@ body {
   font-style: normal;
 }
 
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -47,9 +45,6 @@ hr {
   letter-spacing: -0.01em;
   margin-top: 13px;
   margin-right: 10px;
-
-
-
 }
 
 .main {
@@ -73,7 +68,6 @@ h4 {
   padding: 0;
   font-weight: 350;
   line-height: 24px;
-  ;
 }
 
 .main h1 {
@@ -146,15 +140,28 @@ h4 {
   width: 90%;
 }
 
-.img1,
-.img2 {
+.img1 {
   height: 650px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.img2 {
+  height: 650px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.img1:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
+
+.img2:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
 
 .about-images img {
   max-width: 50vw;
-  /* border-radius: 10px; */
 }
 
 .portfolio {
@@ -180,12 +187,14 @@ h4 {
   margin: 0 auto;
   padding: 20px;
   width: 90%;
+
 }
 
 .image-row {
   display: flex;
   justify-content: center;
   gap: 48px;
+
 }
 
 .image-row.single {
@@ -194,19 +203,47 @@ h4 {
   margin-top: 35px;
   width: 1008px;
   height: 672px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.image-row.single:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
 
 .portfolio1,
 .portfolio5 {
   width: 648px;
   height: 664px;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.portfolio1:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
+
+.portfolio2:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
+
+.portfolio4:hover {
+  cursor: pointer;
+  transform: scale(1.04)
+}
+
+.portfolio5:hover {
+  cursor: pointer;
+  transform: scale(1.04)
 }
 
 .portfolio2,
 .portfolio4 {
   width: 648px;
   height: 443px;
+  transition: transform 0.3s ease-in-out;
 }
 
 
