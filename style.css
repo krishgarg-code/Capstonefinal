@@ -6,9 +6,6 @@ body {
   font-family: "Bebas Neue", serif;
   font-weight: 400;
   font-style: normal;
-  font-family: "Bebas Neue", serif;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .navbar {
@@ -16,7 +13,6 @@ body {
   justify-content: space-between;
   padding: 10px 20px;
   text-align: center;
-
 }
 
 hr {
@@ -53,21 +49,21 @@ hr {
   background-color: white;
 }
 
-h3 {
-  font-family: Roboto Mono;
+h3,
+h4 {
+  font-family: "Roboto Mono";
   font-weight: 350;
-  font-size: 20px;
-  margin: 7px auto;
   line-height: 24px;
+  margin: 7px auto;
+}
+
+h3 {
+  font-size: 20px;
 }
 
 h4 {
-  font-family: Roboto Mono;
-  margin-top: 0px;
   font-size: 18px;
-  padding: 0;
-  font-weight: 350;
-  line-height: 24px;
+  margin-top: 0;
 }
 
 .main h1 {
@@ -78,7 +74,6 @@ h4 {
   text-align: center;
 }
 
-
 .main img {
   max-width: 100%;
   height: auto;
@@ -88,7 +83,7 @@ h4 {
 
 .main img:hover {
   cursor: pointer;
-  transform: scale(1.01)
+  transform: scale(1.01);
 }
 
 .projects {
@@ -105,7 +100,6 @@ h4 {
 
 .project-item img {
   width: 100%;
-  /* border-radius: 10px; */
 }
 
 .project-item {
@@ -114,7 +108,7 @@ h4 {
 
 .project-item:hover {
   cursor: pointer;
-  transform: scale(1.04)
+  transform: scale(1.04);
 }
 
 .about {
@@ -126,42 +120,33 @@ h4 {
 .about p {
   margin: 60px 0;
   font-size: 48px;
-  margin-bottom: 100px;
   line-height: 52px;
   font-weight: 400;
   width: 45vw;
-
+  margin-left: 30px;
 }
 
 .about-images {
   display: flex;
   gap: 48px;
-  flex: 1;
-  width: 90%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.img1 {
-  height: 650px;
-  transition: transform 0.3s ease-in-out;
-}
-
+.img1,
 .img2 {
   height: 650px;
   transition: transform 0.3s ease-in-out;
 }
 
-.img1:hover {
-  cursor: pointer;
-  transform: scale(1.04)
-}
-
+.img1:hover,
 .img2:hover {
   cursor: pointer;
-  transform: scale(1.04)
+  transform: scale(1.04);
 }
 
 .about-images img {
-  max-width: 50vw;
+  max-width: 100%;
 }
 
 .portfolio {
@@ -173,7 +158,7 @@ h4 {
   margin-bottom: 30px;
   width: 42vw;
   margin-bottom: 100px;
-  margin-left: 750px;
+  margin-left: 780px;
   font-family: Roboto Mono;
   font-weight: 350;
   line-height: 32px;
@@ -181,20 +166,27 @@ h4 {
 
 }
 
+
 .portfolio-grid {
   display: flex;
+  flex-wrap: wrap;
   gap: 48px;
   margin: 0 auto;
   padding: 20px;
-  width: 90%;
-
+  justify-content: center;
 }
 
 .image-row {
   display: flex;
   justify-content: center;
+  /* flex-wrap: wrap; */
   gap: 48px;
-
+}
+.image-row1 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 48px;
 }
 
 .image-row.single {
@@ -246,17 +238,23 @@ h4 {
   transition: transform 0.3s ease-in-out;
 }
 
+.portfolio1:hover,
+.portfolio2:hover,
+.portfolio4:hover,
+.portfolio5:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
 
 footer {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
+  flex-wrap: wrap;
+  justify-content:space-between;
   padding: 20px;
-  font-size: 24px;
+  font-size: 30px;
   color: black;
-  position: relative;
   margin-top: 60px;
-
+  margin-bottom: -14px;
 }
 
 .contact-btn {
@@ -267,12 +265,10 @@ footer {
   border: 1.5px solid;
   border-radius: 5px;
   cursor: pointer;
-  height: 48px;
-  width: 169px;
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-  font-family: Roboto Mono;
+  font-family: "Roboto Mono";
 }
 
 .contact-btn:hover {
@@ -280,15 +276,87 @@ footer {
   color: aliceblue;
 }
 
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-#left1 {
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: -0.01em;
-  margin-left: 35px;
+  .portfolio-text,
+  .about p {
+    font-size: 20px;
+    width: 80%;
+  }
+  .portfolio-text{
+    margin-left: 40px;
+  }
+
+  .about-images img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
-.right2 {
-  margin-right: 20px;
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    font-size: 32px;
+  }
+
+  .right {
+    font-size: 20px;
+  }
+
+  .main h1 {
+    font-size: 80px;
+  }
+.image-row.single{
+  margin-left:-5px;
+  
+}
+  .about p,
+  .portfolio-text {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .portfolio1,
+  .portfolio2,
+  .portfolio4,
+  .portfolio5,
+  .image-row.single {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .main h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+  .footer{
+    justify-content: center;
+  }
+  .contact-btn {
+    margin-left: 110px;
+  }
+  #left1{
+    margin-left: 105px;
+    font-size: 30px;
+  }
 }
